@@ -2,13 +2,16 @@ import React from "react";
 import KegDetails from "./KegDetails";
 import NewKegForm from "./NewKegForm";
 import ListView from "./ListView";
+// import { connect } from 'react-redux';
+
+// KegController = connect()(KegController);
 
 class KegController extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       formVisibleOnPage: false,
-      onTap: [],
+      // onTap: [],
       selectedKeg: null,
       kegDetailsVisible: false,
       totalPintsLeft: 0
@@ -52,6 +55,7 @@ class KegController extends React.Component {
       totalPintsLeft: this.state.totalPintsLeft + 124
     });
   }
+
 
   handleBuyingPintsClick = (id) => {
     const selectedKeg = this.state.onTap.filter((keg) => {

@@ -1,0 +1,18 @@
+ths.setState({keg: 10})
+
+// Context hook and useState, useReducer hooks: 
+
+# props drilling...
+# 100 components...needs the currentUser info!..keep passing to childrens....
+
+How Redux works:
+
+- User types an input
+- calls an action creator (that returns an action) [actionCreatiors]
+- Dispatched to Redux
+- Redux inserts that action root reducer [Reducers folder with a root reducer, and some other reducers..]
+- root reducer delegates the action to the correct reducer
+- reducer is a simple function (pure function) that takes 2 arguments: old state and an action, based on these 2, it returns the
+new state
+- this new state then stored in the redux store []
+- at that point, React knows som state has changed, and it re-renders the DOM
